@@ -1,8 +1,8 @@
-package org.hit.edu.service;
+package exception_finding_modules.device.service;
 
-import org.hit.edu.entity.CommonResult;
-import org.hit.edu.entity.VO.DeviceConnectVO;
-import org.hit.edu.entity.VO.ProcessVO;
+import exception_finding_modules.device.entity.CommonResult;
+import exception_finding_modules.device.entity.VO.DeviceConnectVO;
+import exception_finding_modules.device.entity.VO.ProcessVO;
 
 public interface DeviceWaringService {
     /**

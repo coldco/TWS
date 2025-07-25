@@ -1,4 +1,4 @@
-package org.hit.edu.entity.DTO;
+package exception_finding_modules.device.entity.DTO;
 
 public class Process {
     private String name; // 设备名称

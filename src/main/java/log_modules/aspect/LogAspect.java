@@ -1,10 +1,10 @@
-package org.hit.edu.aspect;
+package log_modules.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.hit.edu.annotation.LogExecution;
-import org.hit.edu.controller.LogController;
+import log_modules.annotation.LogExecution;
+import log_modules.controller.LogController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

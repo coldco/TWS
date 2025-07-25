@@ -1,4 +1,4 @@
-package org.hit.edu.entity;
+package exception_finding_modules.device.entity;
 
 public class CommonResult<T> {
     private int code;

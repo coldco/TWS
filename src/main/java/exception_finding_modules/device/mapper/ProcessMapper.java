@@ -1,7 +1,7 @@
-package org.hit.edu.mapper;
+package exception_finding_modules.device.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.hit.edu.entity.DTO.Process;
+import exception_finding_modules.device.entity.DTO.Process;
 
 import java.util.List;
 

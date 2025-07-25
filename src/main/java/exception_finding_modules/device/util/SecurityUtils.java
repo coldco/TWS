@@ -1,4 +1,4 @@
-package org.hit.edu.util;
+package exception_finding_modules.device.util;
 
 import org.springframework.stereotype.Component;
 

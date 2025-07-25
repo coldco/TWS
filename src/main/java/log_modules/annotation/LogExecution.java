@@ -1,4 +1,4 @@
-package org.hit.edu.annotation;
+package log_modules.annotation;
 
 import java.lang.annotation.*;
 

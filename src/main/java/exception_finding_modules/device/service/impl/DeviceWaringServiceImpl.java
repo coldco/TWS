@@ -1,18 +1,18 @@
-package org.hit.edu.service.impl;
+package exception_finding_modules.device.service.impl;
 
-import org.hit.edu.entity.CommonResult;
-import org.hit.edu.entity.DTO.Device;
-import org.hit.edu.entity.DTO.Process;
-import org.hit.edu.entity.GraphEntity;
-import org.hit.edu.entity.VO.DeviceConnectVO;
-import org.hit.edu.entity.VO.ProcessVO;
-import org.hit.edu.mapper.DeviceMapper;
-import org.hit.edu.mapper.ProcessMapper;
-import org.hit.edu.service.DeviceWaringService;
+import exception_finding_modules.device.entity.CommonResult;
+import exception_finding_modules.device.entity.DTO.Device;
+import exception_finding_modules.device.entity.DTO.Process;
+import exception_finding_modules.device.entity.GraphEntity;
+import exception_finding_modules.device.entity.VO.DeviceConnectVO;
+import exception_finding_modules.device.entity.VO.ProcessVO;
+import exception_finding_modules.device.mapper.DeviceMapper;
+import exception_finding_modules.device.mapper.ProcessMapper;
+import exception_finding_modules.device.service.DeviceWaringService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-import org.hit.edu.util.SecurityUtils;
+import exception_finding_modules.device.util.SecurityUtils;
 
 
 import java.util.ArrayList;

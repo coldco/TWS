@@ -1,9 +1,9 @@
-package org.hit.edu.controller;
+package log_modules.controller;
 
-import org.hit.edu.entity.CommonResult;
-import org.hit.edu.entity.VO.DeviceConnectVO;
-import org.hit.edu.entity.VO.ProcessVO;
-import org.hit.edu.service.DeviceWaringService;
+import exception_finding_modules.device.entity.CommonResult;
+import exception_finding_modules.device.entity.VO.DeviceConnectVO;
+import exception_finding_modules.device.entity.VO.ProcessVO;
+import exception_finding_modules.device.service.DeviceWaringService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
