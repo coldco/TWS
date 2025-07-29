@@ -1,10 +1,11 @@
 package log_modules.controller;
 
+import log_modules.en.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Random;
+import java.util.*;
 
 import static java.lang.Thread.sleep;
 
@@ -20,18 +21,6 @@ public class LogController {
 
     public int getTime(){
         return getTime(29,10);
-    }
-
-
-
-
-
-    @GetMapping("/testLog")
-    public String testLog(){
-        log.info("这是 info 日志");
-        log.debug("这是 debug 日志");
-        log.error("这是 error 日志");
-        return "ok";
     }
 
     @GetMapping("/大屏")
@@ -50,7 +39,7 @@ public class LogController {
         log.info("异常处理统计: 今日处理异常 2 条");
         log.info("大屏信息统计结束");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(startTime-endTime)+"ms");
+        log.info("大屏信息统计耗时"+(startTime-endTime)+"ms");
         return "ok";
     }
 
@@ -73,12 +62,13 @@ public class LogController {
         log.info("10\tDMZ-DATA\tDMZ Server\tWindows Server 2019\t192.168.0.100\t00:1A:2B:3C:4D:08\tDMZ Zone\tData Exchange Area");
         log.info("主机漏洞发现查找完毕");
         long  endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("主机漏洞发现查找耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
+
     @GetMapping("/控制逻辑检测")
     public String jiekou1() throws InterruptedException {
-        long stratTime = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         log.info("控制逻辑检测开始");
         log.info("调用控制逻辑接口: /api/control/logic");
         log.info("主机漏洞发现查找中");
@@ -134,7 +124,7 @@ public class LogController {
                 "在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。");
         log.info("控制逻辑检测结束");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-stratTime)+"ms");
+        log.info("控制逻辑检测耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -271,7 +261,7 @@ public class LogController {
                 "在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。\n");
         log.info("漏洞建模结束");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("漏洞建模耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -314,7 +304,7 @@ public class LogController {
                 "木马植入并加密控制逻辑，使PLC失去控制，逼迫运营方支付赎金。");
         log.info("漏洞挖掘结束");
         long  endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("漏洞挖掘耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -331,9 +321,10 @@ public class LogController {
         log.info("关系加载成功");
         log.info("本体模型结束");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(startTime-endTime)+"ms");
+        log.info("本体模型耗时"+(startTime-endTime)+"ms");
         return "ok";
     }
+
     @GetMapping("设备关联")
     public String jiekou5() throws InterruptedException{
         long startTime = System.currentTimeMillis();
@@ -352,8 +343,6 @@ public class LogController {
         log.info("运行耗时"+(startTime-endTime)+"ms");
         return "ok";
     }
-
-
     @GetMapping("过程关联")
     public String jiekou6()throws InterruptedException{
         long startTime = System.currentTimeMillis();
@@ -368,7 +357,7 @@ public class LogController {
         log.info("过程关系查找结束");
         log.info("过程关联结束");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("过程关联耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -390,7 +379,7 @@ public class LogController {
         sleep(3);
         log.info("关系渲染结束");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("语义感知耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -452,19 +441,20 @@ public class LogController {
                 "在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。");
         sleep(25);
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("异常检测"+(endTime-startTime)+"ms");
         return "ok";
     }
 
-
     @GetMapping("时许因果表征")
     public String jiekou9()throws InterruptedException{
-        long startTime = System.currentTimeMillis();
+
         log.info("时许因果表征开始");
+        long startTime = System.currentTimeMillis();
+        log.info("开始加载资源");
         sleep(2);
         log.info("资源加载完成");
         long  endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("资源加载耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -484,9 +474,10 @@ public class LogController {
         log.info("中高风险漏洞数："+"6");
         log.info("中风险漏洞数："+"11");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("漏洞级度量耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
+
     @GetMapping("设备级度量")
     public String jiekou11()throws InterruptedException{
         long startTime = System.currentTimeMillis();
@@ -503,7 +494,7 @@ public class LogController {
         log.info("中高风险漏洞数："+"8");
         log.info("中风险漏洞数："+"11");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("设备级度量耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -523,7 +514,7 @@ public class LogController {
         log.info("中高风险漏洞数："+"7");
         log.info("中风险漏洞数："+"10");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("系统级度量耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -535,10 +526,9 @@ public class LogController {
         sleep(time);
         log.info("资源加载完成");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("资源加载耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
-
 
     @GetMapping("资源调配")
     public String jiekou15()throws InterruptedException{
@@ -555,7 +545,7 @@ public class LogController {
         sleep(time);
         log.info("资源调配完成");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("资源调配耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 
@@ -628,7 +618,7 @@ public class LogController {
                 "中高\n" +
                 "安全更新延后，已知漏洞未修，易被勒索或数据泄露");
         long endTime = System.currentTimeMillis();
-        log.info("运行耗时"+(endTime-startTime)+"ms");
+        log.info("渗透耗时"+(endTime-startTime)+"ms");
         return "ok";
     }
 

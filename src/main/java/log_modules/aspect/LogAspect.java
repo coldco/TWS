@@ -1,7 +1,7 @@
 package log_modules.aspect;
 
 import log_modules.annotation.LogExecution;
-import log_modules.controller.LogController;
+import log_modules.controller.LogController_v2;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class LogAspect {
-    private static final Logger log = LoggerFactory.getLogger(LogController.class);
+    private static final Logger log = LoggerFactory.getLogger(LogController_v2.class);
 
     /**
      * 日志记录aop
