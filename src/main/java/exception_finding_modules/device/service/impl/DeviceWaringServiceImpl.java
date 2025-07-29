@@ -9,6 +9,7 @@ import exception_finding_modules.device.entity.VO.ProcessVO;
 import exception_finding_modules.device.mapper.DeviceMapper;
 import exception_finding_modules.device.mapper.ProcessMapper;
 import exception_finding_modules.device.service.DeviceWaringService;
+import log_modules.annotation.LogExecution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -39,6 +40,7 @@ public class DeviceWaringServiceImpl implements DeviceWaringService {
      * @return
      */
     @Override
+    @LogExecution("设备发现")
     public CommonResult<DeviceConnectVO> getDeviceConnectInfo() {
         //1. 判断用户权限
         if (!securityUtils.getSubject().isPermitted("device:connect")) {
@@ -81,6 +83,7 @@ public class DeviceWaringServiceImpl implements DeviceWaringService {
      * 过程关联
      * @return
      */
+    @LogExecution("过程关联")
     @Override
     public CommonResult<ProcessVO> getProcessConnect() {
         //1. 判断用户权限

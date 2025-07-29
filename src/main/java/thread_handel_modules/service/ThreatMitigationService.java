@@ -1,13 +1,16 @@
-package data_handel_modules.service.impl;
+package thread_handel_modules.service;
 
+import log_modules.annotation.LogExecution;
 import org.springframework.stereotype.Service;
 
 @Service
+
 public class ThreatMitigationService {
 
     /**
      * 启动整个威胁阻断处理流程
      */
+    @LogExecution("威胁阻断")
     public void startThreatMitigationProcess() {
         // 1. 启动取水泵，控制流量
         startWaterPump(2000);

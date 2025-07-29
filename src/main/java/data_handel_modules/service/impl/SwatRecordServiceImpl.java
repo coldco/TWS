@@ -33,4 +33,10 @@ public class SwatRecordServiceImpl implements SwatRecordService {
     public boolean delete(String timestamp) {
         return mapper.deleteByTimestamp(timestamp) > 0;
     }
+
+
+
+
+
+
 }
