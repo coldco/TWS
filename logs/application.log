@@ -1,863 +1,142 @@
-2025-07-24 16:29:34.094 [main] INFO  LogModelsApplication - Starting LogModelsApplication using Java 1.8.0_452 on DESKTOP-LVJOTF2 with PID 21204 (E:\code\java\log_models\target\classes started by Lenovo in E:\code\java\log_models)
-2025-07-24 16:29:34.095 [main] DEBUG LogModelsApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-07-24 16:29:34.096 [main] INFO  LogModelsApplication - No active profile set, falling back to 1 default profile: "default"
-2025-07-24 16:29:34.859 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2025-07-24 16:29:34.865 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-07-24 16:29:34.867 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-07-24 16:29:34.867 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-07-24 16:29:34.946 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-07-24 16:29:34.946 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 819 ms
-2025-07-24 16:29:35.148 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-07-24 16:29:35.159 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2025-07-24 16:29:35.164 [main] INFO  LogModelsApplication - Started LogModelsApplication in 1.355 seconds (JVM running for 1.964)
-2025-07-24 16:29:53.921 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-24 16:29:53.921 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-07-24 16:29:53.921 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-07-24 16:29:53.950 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:53.950 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:53.950 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:53.998 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:53.998 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:53.998 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 运行耗时48ms
-2025-07-24 16:29:56.835 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:56.836 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:56.836 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:56.876 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:56.876 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:56.877 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 运行耗时41ms
-2025-07-24 16:29:57.507 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:57.507 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:57.507 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:57.553 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:57.553 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:57.556 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 运行耗时49ms
-2025-07-24 16:29:57.995 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:57.996 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:57.996 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:58.032 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:58.032 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:58.032 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 运行耗时37ms
-2025-07-24 16:29:58.180 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:58.180 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:58.180 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:58.215 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:58.216 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:58.216 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 运行耗时36ms
-2025-07-24 16:29:58.341 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:58.341 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:58.341 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:58.371 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:58.372 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:58.372 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 运行耗时31ms
-2025-07-24 16:29:58.510 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:58.510 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:58.510 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:58.548 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:58.548 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:58.548 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 运行耗时38ms
-2025-07-24 16:29:58.719 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:58.719 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:58.719 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:58.748 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:58.748 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:58.748 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 运行耗时29ms
-2025-07-24 16:29:58.847 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:58.847 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:58.847 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:58.878 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:58.878 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:58.878 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 运行耗时31ms
-2025-07-24 16:29:59.104 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:59.104 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:59.104 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:59.153 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:59.154 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:59.154 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 运行耗时50ms
-2025-07-24 16:29:59.258 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:59.258 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:59.258 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:59.292 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:59.292 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:59.292 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 运行耗时34ms
-2025-07-24 16:29:59.401 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:59.401 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:59.401 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:59.444 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:59.444 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:59.444 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 运行耗时43ms
-2025-07-24 16:29:59.530 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:59.530 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:59.530 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:59.565 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:59.565 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:59.565 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 运行耗时35ms
-2025-07-24 16:29:59.788 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:59.788 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:59.788 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:59.832 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:59.832 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:59.832 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 运行耗时44ms
-2025-07-24 16:29:59.907 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:29:59.907 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:29:59.907 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:29:59.935 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:29:59.935 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:29:59.935 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 运行耗时28ms
-2025-07-24 16:30:00.075 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
-2025-07-24 16:30:00.075 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
-2025-07-24 16:30:00.075 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
-2025-07-24 16:30:00.104 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 1
-L1
-Control Logic Injection 攻击
-PLC逻辑
-高
-攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
-2
-L1
-Pin Control Attack
-PLC I/O配置
-高
-修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
-3
-L1
-Ladder Logic Bomb (LLB)
-PLC控制程序
-高
-隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
-4
-L2
-Stealthy Deception Attack
-HMI ↔ PLC通信
-高
-中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
-5
-L1/L2
-LogicLocker 工控勒索蠕虫
-多品牌PLC
-中高
-勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
-6
-L2/L3
-Triton (Trisis) 针对SIS
-Schneider Triconex SIS主机
-严重
-篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
-7
-L1/L2
-Data Execution / Fragmentation Attack
-PLC生命周期
-高
-网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
-8
-L2
-OPC/DCP 中间人逻辑篡改
-OPC通信链路
-中高
-在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
-2025-07-24 16:30:00.104 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
-2025-07-24 16:30:00.104 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 运行耗时29ms
+2025-07-29 17:12:11.854 [main] INFO  LogModelsApplication - Starting LogModelsApplication using Java 17.0.13 on DESKTOP-AF7763U with PID 21404 (D:\code\log_models\target\classes started by admin in D:\code\log_models)
+2025-07-29 17:12:11.857 [main] INFO  LogModelsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-29 17:12:11.897 [main] WARN  o.s.b.c.ConfigurationWarningsApplicationContextInitializer - 
+
+** WARNING ** : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.
+
+
+2025-07-29 17:12:12.267 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/D:\app\develop\maven\apache-maven-3.9.11-bin\apache-maven-3.9.11\lib\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]; nested exception is java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+2025-07-29 17:12:12.271 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-07-29 17:12:12.283 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/D:\app\develop\maven\apache-maven-3.9.11-bin\apache-maven-3.9.11\lib\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]; nested exception is java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:457)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:316)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:276)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:295)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at LogModelsApplication.main(LogModelsApplication.java:12)
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:512)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:495)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:430)
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/r2dbc/spi/ValidationDepth
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.getDeclaredMethods(JavaBeanBinder.java:143)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.getSorted(JavaBeanBinder.java:152)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.addProperties(JavaBeanBinder.java:135)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.<init>(JavaBeanBinder.java:130)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.get(JavaBeanBinder.java:238)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:57)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$5(Binder.java:476)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:590)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withDataObject(Binder.java:576)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$300(Binder.java:537)
+	at org.springframework.boot.context.properties.bind.Binder.bindDataObject(Binder.java:474)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:343)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:332)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:262)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:223)
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:142)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.r2dbc.spi.ValidationDepth
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 47 common frames omitted
+2025-07-29 17:21:12.517 [main] INFO  LogModelsApplication - Starting LogModelsApplication using Java 17.0.13 on DESKTOP-AF7763U with PID 18524 (D:\code\log_models\target\classes started by admin in D:\code\log_models)
+2025-07-29 17:21:12.520 [main] INFO  LogModelsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-29 17:21:12.554 [main] WARN  o.s.b.c.ConfigurationWarningsApplicationContextInitializer - 
+
+** WARNING ** : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.
+
+
+2025-07-29 17:21:12.904 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/D:\app\develop\maven\apache-maven-3.9.11-bin\apache-maven-3.9.11\lib\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]; nested exception is java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+2025-07-29 17:21:12.907 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-07-29 17:21:12.919 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/D:\app\develop\maven\apache-maven-3.9.11-bin\apache-maven-3.9.11\lib\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]; nested exception is java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:457)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:316)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:276)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:295)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at LogModelsApplication.main(LogModelsApplication.java:12)
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:512)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:495)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:430)
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/r2dbc/spi/ValidationDepth
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.getDeclaredMethods(JavaBeanBinder.java:143)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.getSorted(JavaBeanBinder.java:152)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.addProperties(JavaBeanBinder.java:135)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.<init>(JavaBeanBinder.java:130)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.get(JavaBeanBinder.java:238)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:57)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$5(Binder.java:476)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:590)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withDataObject(Binder.java:576)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$300(Binder.java:537)
+	at org.springframework.boot.context.properties.bind.Binder.bindDataObject(Binder.java:474)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:343)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:332)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:262)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:223)
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:142)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.r2dbc.spi.ValidationDepth
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 47 common frames omitted

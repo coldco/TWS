@@ -28,7 +28,10 @@ public class LogController_v2 {
         long startTime = System.currentTimeMillis();
         log.info("开始大屏信息统计");
         // 获取设备状态
+        long deviceStatusStartTime = System.currentTimeMillis();
         List<DeviceStatus> deviceStatusList = fetchDeviceStatus();
+        long deviceStatusEndTime = System.currentTimeMillis();
+        log.info("获取设备状态耗时: {}ms", deviceStatusEndTime - deviceStatusStartTime);
         int time = getTime();
         sleep(time);
         log.info("启动大屏数据采集调试器");
@@ -58,7 +61,10 @@ public class LogController_v2 {
         log.info("主机漏洞发现查找开始");
 
         // 查询主机列表
+        long hostListStartTime = System.currentTimeMillis();
         List<HostInfo> hostList = getAllHosts();
+        long hostListEndTime = System.currentTimeMillis();
+        log.info("获取主机列表耗时: {}ms", hostListEndTime - hostListStartTime);
 
         int time = getTime();
         sleep(time);
@@ -90,7 +96,10 @@ public class LogController_v2 {
         log.info("调用控制逻辑接口: /api/control/logic");
 
         // 获取已识别攻击模式
+        long patternsStartTime = System.currentTimeMillis();
         List<ControlAttackPattern> patterns = getControlLogicThreats();
+        long patternsEndTime = System.currentTimeMillis();
+        log.info("获取控制逻辑攻击模式耗时: {}ms", patternsEndTime - patternsStartTime);
 
         int time = getTime();
         sleep(time);
@@ -119,7 +128,10 @@ public class LogController_v2 {
         log.info("漏洞建模开始");
 
         // 漏洞查询
+        long vulnerabilityStartTime = System.currentTimeMillis();
         Vulnerability v = getVulnerabilityByCVE("CVE-2025-2223");
+        long vulnerabilityEndTime = System.currentTimeMillis();
+        log.info("获取漏洞信息耗时: {}ms", vulnerabilityEndTime - vulnerabilityStartTime);
 
         log.info("调用控制逻辑接口: /api/control/logic");
         int time = getTime();
@@ -144,7 +156,10 @@ public class LogController_v2 {
         log.info("漏洞挖掘开始");
 
         // 漏洞扫描模拟
+        long discoveredStartTime = System.currentTimeMillis();
         List<DiscoveredVulnerability> discovered = discoverVulnerabilities(new SystemTarget("控制网络"));
+        long discoveredEndTime = System.currentTimeMillis();
+        log.info("漏洞扫描模拟耗时: {}ms", discoveredEndTime - discoveredStartTime);
 
         int time1 = getTime(10, 1);
         sleep(time1);
@@ -176,7 +191,10 @@ public class LogController_v2 {
         log.info("本体模型开始");
 
         // 加载本体模型
+        long modelStartTime = System.currentTimeMillis();
         OntologyModel model = loadOntologyModel();
+        long modelEndTime = System.currentTimeMillis();
+        log.info("加载本体模型耗时: {}ms", modelEndTime - modelStartTime);
 
         int time1 = getTime(10, 1);
         sleep(time1);
@@ -187,8 +205,8 @@ public class LogController_v2 {
         sleep(time2);
         log.info("关系加载成功");
         log.info("本体模型结束");
-        long endTime = System.currentTimeMillis();
-        log.info("本体模型耗时" + (endTime - startTime) + "ms");
+        long endTime2 = System.currentTimeMillis();
+        log.info("本体模型运行耗时" + (endTime2 - startTime) + "ms");
         return "ok";
     }
 
@@ -203,9 +221,12 @@ public class LogController_v2 {
     public String jiekou5() throws InterruptedException {
         long startTime = System.currentTimeMillis();
         log.info("设备关联开始");
-
+        log.info("获取设备关联关系");
         // 获取设备关联关系
+        long deviceMapStartTime = System.currentTimeMillis();
         Map<String, List<String>> deviceMap = getDeviceRelations();
+        long deviceMapEndTime = System.currentTimeMillis();
+        log.info("获取设备关联关系耗时: {}ms", deviceMapEndTime - deviceMapStartTime);
 
         int time = getTime();
         log.info("调用设备关联接口" + "/api/control/device");
@@ -217,8 +238,7 @@ public class LogController_v2 {
         log.info("设备关系查找开始");
         log.info("设备关系查找结束");
         log.info("设备关联结束");
-        long endTime = System.currentTimeMillis();
-        log.info("运行耗时" + (endTime - startTime) + "ms");
+
         return "ok";
     }
 
@@ -235,9 +255,12 @@ public class LogController_v2 {
     public String jiekou6() throws InterruptedException {
         long startTime = System.currentTimeMillis();
         log.info("过程关联开始");
-
+        log.info("加载过程模型");
         // 加载过程模型
+        long nodesStartTime = System.currentTimeMillis();
         List<ProcedureNode> nodes = getProcedureNodes();
+        long nodesEndTime = System.currentTimeMillis();
+        log.info("加载过程模型耗时: {}ms", nodesEndTime - nodesStartTime);
 
         int time = getTime();
         log.info("调用过程关联接口" + "/api/control/device/procedure");
@@ -248,8 +271,7 @@ public class LogController_v2 {
         sleep(time);
         log.info("过程关系查找结束");
         log.info("过程关联结束");
-        long endTime = System.currentTimeMillis();
-        log.info("过程关联耗时" + (endTime - startTime) + "ms");
+
         return "ok";
     }
 
@@ -263,7 +285,10 @@ public class LogController_v2 {
         log.info("语义感知开始");
 
         // 执行语义分析
+        long resultStartTime = System.currentTimeMillis();
         SemanticResult result = runSemanticAnalysis();
+        long resultEndTime = System.currentTimeMillis();
+        log.info("执行语义分析耗时: {}ms", resultEndTime - resultStartTime);
 
         sleep(8);
         log.info("调用关联接口" + "/api/control/device/feeling");
@@ -293,7 +318,10 @@ public class LogController_v2 {
         log.info("异常检测开始");
 
         // 检测控制逻辑异常
+        long patternsStartTime = System.currentTimeMillis();
         List<AbnormalPattern> patterns = detectAbnormalPatterns();
+        long patternsEndTime = System.currentTimeMillis();
+        log.info("检测控制逻辑异常耗时: {}ms", patternsEndTime - patternsStartTime);
 
         log.info("处理语义感知结果");
         log.info("调用接口" + "/api/control/device/error");
@@ -303,7 +331,7 @@ public class LogController_v2 {
         log.info("异常检测结束");
         sleep(25);
         long endTime = System.currentTimeMillis();
-        log.info("异常检测" + (endTime - startTime) + "ms");
+        log.info("异常检测耗时: {}ms", endTime - startTime);
         return "ok";
     }
 
@@ -320,7 +348,10 @@ public class LogController_v2 {
         long startTime = System.currentTimeMillis();
 
         // 加载因果图谱
+        long graphStartTime = System.currentTimeMillis();
         CausalGraph graph = loadCausalGraph();
+        long graphEndTime = System.currentTimeMillis();
+        log.info("加载因果图谱耗时: {}ms", graphEndTime - graphStartTime);
 
         log.info("开始加载资源");
         sleep(2);
@@ -343,7 +374,10 @@ public class LogController_v2 {
         log.info("漏洞级度量开始");
 
         // 执行漏洞风险评分
+        long scoreStartTime = System.currentTimeMillis();
         RiskScore score = computeGlobalRisk();
+        long scoreEndTime = System.currentTimeMillis();
+        log.info("执行漏洞风险评分耗时: {}ms", scoreEndTime - scoreStartTime);
 
         log.info("加载全局语义感知");
         log.info("调用关联接口" + "/api/control/device/feeling");
@@ -372,7 +406,10 @@ public class LogController_v2 {
         log.info("设备级度量开始");
 
         // 度量设备风险
+        long deviceScoreStartTime = System.currentTimeMillis();
         RiskScore score = computeDeviceRisk();
+        long deviceScoreEndTime = System.currentTimeMillis();
+        log.info("度量设备风险耗时: {}ms", deviceScoreEndTime - deviceScoreStartTime);
 
         log.info("加载全局语义感知");
         log.info("调用关联接口" + "/api/control/device/feeling");
@@ -401,7 +438,10 @@ public class LogController_v2 {
         log.info("系统级度量开始");
 
         // 系统级漏洞分析
+        long systemScoreStartTime = System.currentTimeMillis();
         RiskScore score = computeSystemRisk();
+        long systemScoreEndTime = System.currentTimeMillis();
+        log.info("系统级漏洞分析耗时: {}ms", systemScoreEndTime - systemScoreStartTime);
 
         log.info("加载全局语义感知");
         log.info("调用关联接口" + "/api/control/device/feeling");
@@ -430,7 +470,10 @@ public class LogController_v2 {
         log.info("威胁阻断方案开始");
 
         // 执行阻断策略生成
+        long mitigationStartTime = System.currentTimeMillis();
         String result = runThreatMitigationPlan();
+        long mitigationEndTime = System.currentTimeMillis();
+        log.info("执行阻断策略生成耗时: {}ms", mitigationEndTime - mitigationStartTime);
 
         int time = getTime(40, 30);
         sleep(time);
@@ -538,20 +581,29 @@ public class LogController_v2 {
     }
 
     @GetMapping("login")
-    public String jiekou17()throws InterruptedException{
+    public String jiekou17() {
+        long startTime = System.currentTimeMillis();
         log.info("登陆成功");
+        long endTime = System.currentTimeMillis();
+        log.info("登陆操作耗时: {}ms", endTime - startTime);
         return "ok";
     }
 
     @GetMapping("logout")
-    public String jiekou18()throws InterruptedException{
+    public String jiekou18() {
+        long startTime = System.currentTimeMillis();
         log.info("退出成功");
+        long endTime = System.currentTimeMillis();
+        log.info("退出操作耗时: {}ms", endTime - startTime);
         return "ok";
     }
 
     @GetMapping("login_error")
-    public String jiekou19()throws InterruptedException{
+    public String jiekou19() {
+        long startTime = System.currentTimeMillis();
         log.info("登陆失败");
+        long endTime = System.currentTimeMillis();
+        log.info("登陆失败操作耗时: {}ms", endTime - startTime);
         return "ok";
     }
 

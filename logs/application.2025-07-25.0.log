@@ -1,0 +1,863 @@
+2025-07-24 16:29:34.094 [main] INFO  LogModelsApplication - Starting LogModelsApplication using Java 1.8.0_452 on DESKTOP-LVJOTF2 with PID 21204 (E:\code\java\log_models\target\classes started by Lenovo in E:\code\java\log_models)
+2025-07-24 16:29:34.095 [main] DEBUG LogModelsApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-07-24 16:29:34.096 [main] INFO  LogModelsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:29:34.859 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-24 16:29:34.865 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:29:34.867 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:29:34.867 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-07-24 16:29:34.946 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:29:34.946 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 819 ms
+2025-07-24 16:29:35.148 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:29:35.159 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-24 16:29:35.164 [main] INFO  LogModelsApplication - Started LogModelsApplication in 1.355 seconds (JVM running for 1.964)
+2025-07-24 16:29:53.921 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:29:53.921 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:29:53.921 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-24 16:29:53.950 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:53.950 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:53.950 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:53.998 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:53.998 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:53.998 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 运行耗时48ms
+2025-07-24 16:29:56.835 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:56.836 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:56.836 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:56.876 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:56.876 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:56.877 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 运行耗时41ms
+2025-07-24 16:29:57.507 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:57.507 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:57.507 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:57.553 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:57.553 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:57.556 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 运行耗时49ms
+2025-07-24 16:29:57.995 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:57.996 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:57.996 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:58.032 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:58.032 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:58.032 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 运行耗时37ms
+2025-07-24 16:29:58.180 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:58.180 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:58.180 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:58.215 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:58.216 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:58.216 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 运行耗时36ms
+2025-07-24 16:29:58.341 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:58.341 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:58.341 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:58.371 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:58.372 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:58.372 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 运行耗时31ms
+2025-07-24 16:29:58.510 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:58.510 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:58.510 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:58.548 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:58.548 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:58.548 [http-nio-8080-exec-8] INFO  org.hit.edu.controller.LogController - 运行耗时38ms
+2025-07-24 16:29:58.719 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:58.719 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:58.719 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:58.748 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:58.748 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:58.748 [http-nio-8080-exec-4] INFO  org.hit.edu.controller.LogController - 运行耗时29ms
+2025-07-24 16:29:58.847 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:58.847 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:58.847 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:58.878 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:58.878 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:58.878 [http-nio-8080-exec-10] INFO  org.hit.edu.controller.LogController - 运行耗时31ms
+2025-07-24 16:29:59.104 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:59.104 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:59.104 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:59.153 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:59.154 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:59.154 [http-nio-8080-exec-1] INFO  org.hit.edu.controller.LogController - 运行耗时50ms
+2025-07-24 16:29:59.258 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:59.258 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:59.258 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:59.292 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:59.292 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:59.292 [http-nio-8080-exec-2] INFO  org.hit.edu.controller.LogController - 运行耗时34ms
+2025-07-24 16:29:59.401 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:59.401 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:59.401 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:59.444 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:59.444 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:59.444 [http-nio-8080-exec-9] INFO  org.hit.edu.controller.LogController - 运行耗时43ms
+2025-07-24 16:29:59.530 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:59.530 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:59.530 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:59.565 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:59.565 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:59.565 [http-nio-8080-exec-3] INFO  org.hit.edu.controller.LogController - 运行耗时35ms
+2025-07-24 16:29:59.788 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:59.788 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:59.788 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:59.832 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:59.832 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:59.832 [http-nio-8080-exec-5] INFO  org.hit.edu.controller.LogController - 运行耗时44ms
+2025-07-24 16:29:59.907 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:29:59.907 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:29:59.907 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:29:59.935 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:29:59.935 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:29:59.935 [http-nio-8080-exec-6] INFO  org.hit.edu.controller.LogController - 运行耗时28ms
+2025-07-24 16:30:00.075 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测开始
+2025-07-24 16:30:00.075 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 调用控制逻辑接口: /api/control/logic
+2025-07-24 16:30:00.075 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 主机漏洞发现查找中
+2025-07-24 16:30:00.104 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 1
+L1
+Control Logic Injection 攻击
+PLC逻辑
+高
+攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+2
+L1
+Pin Control Attack
+PLC I/O配置
+高
+修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+3
+L1
+Ladder Logic Bomb (LLB)
+PLC控制程序
+高
+隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+4
+L2
+Stealthy Deception Attack
+HMI ↔ PLC通信
+高
+中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+5
+L1/L2
+LogicLocker 工控勒索蠕虫
+多品牌PLC
+中高
+勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+6
+L2/L3
+Triton (Trisis) 针对SIS
+Schneider Triconex SIS主机
+严重
+篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+7
+L1/L2
+Data Execution / Fragmentation Attack
+PLC生命周期
+高
+网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+8
+L2
+OPC/DCP 中间人逻辑篡改
+OPC通信链路
+中高
+在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。
+2025-07-24 16:30:00.104 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 控制逻辑检测结束
+2025-07-24 16:30:00.104 [http-nio-8080-exec-7] INFO  org.hit.edu.controller.LogController - 运行耗时29ms

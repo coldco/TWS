@@ -74,54 +74,55 @@ public class LogController {
         log.info("主机漏洞发现查找中");
         int time = getTime();
         sleep(time);
-        log.info("1\n" +
-                "L1\n" +
-                "Control Logic Injection 攻击\n" +
-                "PLC逻辑\n" +
-                "高\n" +
-                "攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常\n" +
-                "2\n" +
-                "L1\n" +
-                "Pin Control Attack\n" +
-                "PLC I/O配置\n" +
-                "高\n" +
-                "修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。\n" +
-                "3\n" +
-                "L1\n" +
-                "Ladder Logic Bomb (LLB)\n" +
-                "PLC控制程序\n" +
-                "高\n" +
-                "隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。\n" +
-                "4\n" +
-                "L2\n" +
-                "Stealthy Deception Attack\n" +
-                "HMI ↔ PLC通信\n" +
-                "高\n" +
-                "中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。\n" +
-                "5\n" +
-                "L1/L2\n" +
-                "LogicLocker 工控勒索蠕虫\n" +
-                "多品牌PLC\n" +
-                "中高\n" +
-                "勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。\n" +
-                "6\n" +
-                "L2/L3\n" +
-                "Triton (Trisis) 针对SIS\n" +
-                "Schneider Triconex SIS主机\n" +
-                "严重\n" +
-                "篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。\n" +
-                "7\n" +
-                "L1/L2\n" +
-                "Data Execution / Fragmentation Attack\n" +
-                "PLC生命周期\n" +
-                "高\n" +
-                "网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。\n" +
-                "8\n" +
-                "L2\n" +
-                "OPC/DCP 中间人逻辑篡改\n" +
-                "OPC通信链路\n" +
-                "中高\n" +
-                "在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。");
+        log.info("""
+                1
+                L1
+                Control Logic Injection 攻击
+                PLC逻辑
+                高
+                攻击者通过网络注入恶意梯形逻辑（如Stuxnet模式）或修改现有功能，使PLC行为异常
+                2
+                L1
+                Pin Control Attack
+                PLC I/O配置
+                高
+                修改PLC内存中I/O配置，不触发硬中断，隐蔽地控制现场设备。
+                3
+                L1
+                Ladder Logic Bomb (LLB)
+                PLC控制程序
+                高
+                隐藏于梯形图中的逻辑炸弹，在特定触发条件下执行破坏性动作（如泄露阀门/流量）。
+                4
+                L2
+                Stealthy Deception Attack
+                HMI ↔ PLC通信
+                高
+                中间人篡改HMI显示/PLC指令，产生合法外观下的破坏操作（如变更设置但显示正常）。
+                5
+                L1/L2
+                LogicLocker 工控勒索蠕虫
+                多品牌PLC
+                中高
+                勒索PLC逻辑并锁定设备，操控阀门或传感器，影响工艺流程。
+                6
+                L2/L3
+                Triton (Trisis) 针对SIS
+                Schneider Triconex SIS主机
+                严重
+                篡改安全仪表系统逻辑，可能导致工艺运行失控或事故。
+                7
+                L1/L2
+                Data Execution / Fragmentation Attack
+                PLC生命周期
+                高
+                网络传输阶段注入控制逻辑，绕过深度包检测，执行伪逻辑块。
+                8
+                L2
+                OPC/DCP 中间人逻辑篡改
+                OPC通信链路
+                中高
+                在通信链路截取并插入虚假设定，如提高反应温度或压力，导致危险操作。""");
         log.info("控制逻辑检测结束");
         long endTime = System.currentTimeMillis();
         log.info("控制逻辑检测耗时"+(endTime-startTime)+"ms");
